@@ -12,8 +12,33 @@ import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 const AddTodo = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+
+  const id = Math.floor(Math.random()*10);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    try {
+      const response  = await axios.post("http://localhost:3000/todolist", {
+        id,
+        title,
+        description,
+        date,
+      });
+
+      navigate("/")
+      
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <div>
@@ -25,16 +50,20 @@ const AddTodo = () => {
           <CardContent className="flex flex-col  py-10 gap-y-5 w-full">
             <div className="gap-y-2">
               <Label>Title</Label>
-              <Input />
+              <Input value={title} onChange={(e) => setTitle(e.target.value)} />
             </div>
             <div className="gap-y-2">
               <Label>To do Description</Label>
-              <Textarea />
+              <Textarea
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
             </div>
             <div className="gap-y-2">
               <Label>Date</Label>
-              <Input />
+              <Input value={date} onChange={(e) => setDate(e.target.value)} />
             </div>
+            <Button onClick={handleSubmit}>Add To Do</Button>
           </CardContent>
           <CardFooter className="flex justify-between">
             <h1>Made with ♥ by Mario Inguito</h1>
