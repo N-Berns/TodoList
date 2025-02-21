@@ -12,7 +12,7 @@ const TodoCard = ({ name, todo, date }) => {
     <div>
       <Card className="w-[600px]">
         <CardHeader>
-          <CardTitle>={name}</CardTitle>
+          <CardTitle>{name}</CardTitle>
         </CardHeader>
         <CardContent>{todo}</CardContent>
         <CardFooter className="flex justify-between">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,8 +10,17 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import TodoCard from "@/components/TodoCard";
+import axios from "axios";
 
 const Todos = () => {
+  const [name, setName] = useState("");
+  const [todo, setTodo] = useState("");
+  const [date, setDate] = useState("");
+
+  useEffect(() => {
+    const response = axios.get("http://localhost:3000/todolist");
+  }, []);
+
   return (
     <div>
       <Card className="w-[750px]">
@@ -21,12 +30,7 @@ const Todos = () => {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-y-5 items-center">
-            <TodoCard />
-            <TodoCard />
-            <TodoCard />
-            <TodoCard />
-            <TodoCard />
-            <TodoCard />
+            <TodoCard name={name} todo={todo} date={date}/>
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
