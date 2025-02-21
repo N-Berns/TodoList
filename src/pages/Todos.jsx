@@ -26,8 +26,7 @@ const Todos = () => {
               <div className="flex flex-col space-y-1.5">
                 <Input id="name" placeholder="Name of your project" />
               </div>
-              <div className="flex flex-col space-y-1.5">
-              </div>
+              <div className="flex flex-col space-y-1.5"></div>
             </div>
           </form>
         </CardContent>
