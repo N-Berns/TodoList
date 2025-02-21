@@ -21,7 +21,6 @@ const Todos = () => {
         const response = await axios.get("http://localhost:3000/todolist");
         setData(response.data);
 
-        // console.log(response);
       } catch (error) {
         console.log(error);
       }
@@ -29,8 +28,6 @@ const Todos = () => {
 
     fetchTodo();
   }, []);
-
-  console.log(data.length);
 
   return (
     <div>
