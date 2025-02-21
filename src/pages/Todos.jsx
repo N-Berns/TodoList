@@ -20,7 +20,6 @@ const Todos = () => {
       try {
         const response = await axios.get("http://localhost:3000/todolist");
         setData(response.data);
-
       } catch (error) {
         console.log(error);
       }
@@ -44,7 +43,7 @@ const Todos = () => {
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <h1>Made with ♥ by Mario Inguito</h1>
+          <h1>Made with ♥ by Neil Bernado</h1>
         </CardFooter>
       </Card>
     </div>

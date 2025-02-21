@@ -19,21 +19,20 @@ const AddTodo = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
-  const id = Math.floor(Math.random()*10);
+  const id = Math.floor(Math.random() * 10);
 
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
     try {
-      const response  = await axios.post("http://localhost:3000/todolist", {
+      const response = await axios.post("http://localhost:3000/todolist", {
         id: id.toString(),
         title,
         description,
         date,
       });
 
-      navigate("/")
-      
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -66,7 +65,7 @@ const AddTodo = () => {
             <Button onClick={handleSubmit}>Add To Do</Button>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <h1>Made with ♥ by Mario Inguito</h1>
+            <h1>Made with ♥ by Neil Bernado</h1>
           </CardFooter>
         </Card>
       </div>

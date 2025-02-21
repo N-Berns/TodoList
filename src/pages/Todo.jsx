@@ -66,7 +66,7 @@ const Todo = () => {
           </CardContent>
 
           <CardFooter className="flex justify-between">
-            <h1>Made with ♥ by Mario Inguito</h1>
+            <h1>Made with ♥ by Neil Bernado</h1>
           </CardFooter>
         </Card>
       </div>
