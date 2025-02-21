@@ -7,17 +7,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-
-const TodoCard = () => {
+const TodoCard = ({ name, todo, date }) => {
   return (
     <div>
-      <Card className="w-[750px]">
+      <Card className="w-[600px]">
         <CardHeader>
-          <CardTitle>Mag Gmall</CardTitle>
+          <CardTitle>={name}</CardTitle>
         </CardHeader>
-        <CardContent>Mag shopping sa Gmall</CardContent>
+        <CardContent>{todo}</CardContent>
         <CardFooter className="flex justify-between">
-          <h1>February 12, 2025</h1>
+          <h1>{date}</h1>
         </CardFooter>
       </Card>
     </div>
