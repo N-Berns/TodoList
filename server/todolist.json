@@ -1,0 +1,29 @@
+{
+  "todolist": [
+    {
+      "title": "Complete Project Proposal",
+      "description": "Draft and finalize the project proposal document.",
+      "date": "2025-02-22"
+    },
+    {
+      "title": "Team Meeting",
+      "description": "Discuss progress and assign tasks for the upcoming sprint.",
+      "date": "2025-02-23"
+    },
+    {
+      "title": "Code Review",
+      "description": "Review the latest commits and provide feedback.",
+      "date": "2025-02-24"
+    },
+    {
+      "title": "Deploy API Update",
+      "description": "Deploy the latest version of the API with new features and fixes.",
+      "date": "2025-02-25"
+    },
+    {
+      "title": "Prepare Presentation",
+      "description": "Create slides and rehearse for the upcoming project presentation.",
+      "date": "2025-02-26"
+    }
+  ]
+}
